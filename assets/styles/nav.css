@@ -1,7 +1,9 @@
 .nav h1
 {
     color: whitesmoke;
+    margin: 0;
     margin-left: 20px;
+    align-self: center;
 }
 body
 {
@@ -13,22 +15,28 @@ body
     display: flex;
     justify-content: space-between;
     background-color: #34495e;
+    height: 8vh;
 }
 
 .nav-items li
 {
-    color: whitesmoke;
-    margin-right: 20px;
-    align-self: center;
+    list-style: none;
     display: inline;
-    
+
 }
 .nav-items
 {
-    list-style:none;
-    color:whitesmoke;
+    align-self: center;
+    margin-right: 20px;
 }
-.nav-items li:not(:last-child)
+.nav-items li a
+{
+    text-decoration: none;
+    color: whitesmoke;
+}
+.nav-items li:not(:last-child) /*sudo selector. 
+                                It says target all the objects inside the list items except for the last object.
+                                 So the last child will not have the margin. Child is each object.*/
 {
     margin-right: 10px;
 }
